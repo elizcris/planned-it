@@ -1,0 +1,73 @@
+<%- include('partials/header') -%>
+  <div>
+      <h1> PACKING </h1>
+  </div>
+
+  <div>
+    <form action="/packing/createItem" method='POST'>
+      <input type="text" placeholder="Enter Packing Item" name='packingItem'>
+      <input type="text" placeholder="Enter Category" name='category'>
+      <input type="submit">
+    </form>
+  </div>
+
+  <div>
+    <form action="/packing/selectItem" method='POST'>
+      <div class="selectItemContainer">
+        <h3>Office & Electronics</h3>
+        <input type="checkbox" id="laptop" name="selectItem" value="laptop" />
+        <label for="laptop">Laptop</label>
+        <input type="checkbox" id="eReader" name="selectItem" value="eReader" />
+        <label for="eReader">eReader</label>
+        <!-- <input type="text" placeholder="Enter Category" name='category'> -->
+        <button type="submit" name="submit" value="electronics">Submit</button>
+        <div class="selectItemContainer">
+          <h3>Toiletries</h3>
+          <input type="checkbox" id="hairbrush" name="selectItem" value="hairbrush" />
+          <label for="hairbrush">Hair Brush</label>
+          <input type="checkbox" id="floss" name="selectItem" value="floss" />
+          <label for="floss">Floss</label>
+          <button type="submit" name="submit" value="toiletries">Submit</button>
+        </div>
+      </div>
+    </form>
+
+    <form action="/packing/selectItem" method='POST'></form>
+
+    </form>
+  </div>
+
+
+
+
+  <div>
+    <ul>
+      <% items.forEach( el => { %>
+        <li class='packingItem' data-id='<%=el._id%>'>
+            <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.item %></span>
+            <span class='del'> Delete </span>
+        </li>
+      <% }) %>    
+      </ul>
+  </div>
+
+  <div>
+    <ul>
+      <% items.forEach( el => { %>
+        <li class='packingItem' data-id='<%=el._id%>'>
+          <% if (el.category == 'Toiletries') { %>
+            <span><%= el.item %></span>
+            <% } %>
+        </li>
+      <% }) %>    
+      </ul>
+  </div>
+
+
+  <h2><%= user.userName %> has <%= left %> things left to do.</h2>
+
+
+  <div>
+    <a href="/logout">Logout</a>
+  </div>
+<%- include('partials/footer') -%>
