@@ -7,8 +7,6 @@ router.get('/', ensureAuth, packingController.getPacking);
 
 router.post('/createItem', packingController.createItem);
 
-router.post('/selectItem', packingController.selectItem);
-
 router.put('markComplete', packingController.markComplete);
 
 router.put('/markIncomplete', packingController.markIncomplete);
