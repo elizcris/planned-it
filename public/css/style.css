@@ -1,0 +1,157 @@
+/*<<<<< FONTS >>>>>*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap');
+
+/*<<<<< BASE STYLES >>>>>*/
+*,
+*::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --title-font-family: 'Inter', sans-serif;
+    --body-font-family: 'DM Serif Display', serif;
+    --main-color: #0B2F89;
+    --background-color: #FFFFFF;
+    --contrast-color: #E8A439;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--body-font-family);
+    font-size: 1.6rem;
+    overflow-x: hidden;
+    height: 100vh;
+    letter-spacing: .03rem;
+    background-image: url(/images/ocean-forest.jpg);
+    background-size: 220%;
+    background-repeat: no-repeat;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--title-font-family);
+}
+
+h1{
+    font-size: 5.2rem;
+    margin: 0;
+}
+
+h2{
+    font-size: 4.6rem;
+}
+
+h3{
+    font-size: 4.1rem;
+}
+
+h4{
+    font-size: 3.6rem;
+}
+
+h5{
+    font-size: 3.2rem;
+}
+
+h6{
+    font-size: 2.9rem;
+}
+
+p{
+    font-family: var(--body-font-family)
+}
+
+span{
+    font-size: 1.8rem;
+}
+
+a{
+    font-size: 1.8rem;
+    letter-spacing: .05rem;
+}
+
+img{
+
+}
+/*<<<<< REUSABLE STYLES >>>>>*/
+.container{
+    /* border: 1px solid red; */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+/*<<<<< HEADER >>>>>*/
+.header{
+    text-align: center;
+    color: white;
+    padding: 2em 1em 2em 1em;
+    background-color: rgb(0,0,0,0.2)
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* font-family: var(--title-font-family) */
+}
+
+.header h1{
+    margin-top: .2em;
+    margin-bottom: .5em;
+}
+
+/*<<<<< INDEX LOGIN/SIGNUP >>>>>*/
+
+.login-signup{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1em;
+    background-color: rgb(0,0,0,0.2)
+}
+
+.login-signup a{
+    text-decoration: none;
+    text-transform: lowercase;
+}
+
+.login-signup a:visited{
+    color: var(--contrast-color);
+}
+
+.login-signup a:hover{
+    text-decoration: underline;
+}
+
+/*<<<<< LOGIN >>>>>*/
+.login-form, .signup-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(0,0,0,0.3)
+}
+
+.login-form label, .signup-form label{
+    display:block;
+    color: var(--contrast-color);
+}
+
+.login-form button, .signup-form button{
+    margin: 1em 6em;
+    padding: .5em 1em;
+}
+
+.login-form button:hover, .signup-form button:hover{
+    background-color: var(--contrast-color)
+}
+
+.form-text{
+    color: white;
+    margin: 0.3em 4em;
+    
+}
