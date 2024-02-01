@@ -16,6 +16,15 @@
   </form>
  </div>
 
+ <ul>
+  <% items.forEach( el => { %>
+          <li class='packingItem' data-id='<%=el._id%>'>
+              <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.item %></span>
+              <span class='del'> Delete </span>
+          </li>
+  <% }) %>    
+</ul>
+
  <div class="items-left-to-pack">
    <h2><%= user.userName %> has <%= left %> things left to do.</h2>
  </div>
