@@ -29,9 +29,20 @@ body{
     overflow-x: hidden;
     height: 100vh;
     letter-spacing: .03rem;
+}
+
+.body-loggedout{
     background-image: url(/images/ocean-forest.jpg);
-    background-size: 220%;
+    background-size: 200%;
     background-repeat: no-repeat;
+}
+
+.body-profile{
+    
+}
+
+.body-loggedin{
+    
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -81,7 +92,7 @@ img{
 }
 /*<<<<< REUSABLE STYLES >>>>>*/
 .container{
-    /* border: 1px solid red; */
+    border: 1px solid red;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -94,15 +105,14 @@ img{
     text-align: center;
     color: white;
     padding: 2em 1em 2em 1em;
-    background-color: rgb(0,0,0,0.2)
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* font-family: var(--title-font-family) */
+    background-color: rgb(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
 }
 
 .header h1{
     margin-top: .2em;
-    margin-bottom: .5em;
+    margin-bottom: .3em;
 }
 
 /*<<<<< INDEX LOGIN/SIGNUP >>>>>*/
@@ -110,7 +120,8 @@ img{
 .login-signup{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 4em;
     padding: 1em;
     background-color: rgb(0,0,0,0.2)
 }
@@ -133,7 +144,7 @@ img{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(0,0,0,0.3)
+    background-color: rgb(0,0,0,0.3);
 }
 
 .login-form label, .signup-form label{
@@ -152,6 +163,99 @@ img{
 
 .form-text{
     color: white;
-    margin: 0.3em 4em;
-    
+    max-width: 60%;
+}
+
+/*<<<<< PROFILE >>>>>*/
+.profile-choosepath{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* flex-wrap: wrap;
+    justify-content: space-evenly; */
+}
+
+.profile-choosepath div{
+    text-align: center;
+    height: 5em;
+    width: 100%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    /* display: block; */
+}
+
+.profile-choosepath a{
+    text-decoration: none;
+    line-height: 2.5em;
+}
+
+.profile-choosepath a:visited{
+    color: black;
+}
+
+.profile-choosepath a:hover{
+    text-decoration: underline;
+    font-size: 2rem;
+}
+
+
+
+/*<<<<< MEDIA QUERIES >>>>>*/
+
+/*<<<<< 425px >>>>>*/
+@media (min-width: 425px){
+
+}
+
+/*<<<<< 475px >>>>>*/
+@media (min-width: 475px){
+    /*<<<<< BASE STYLES >>>>>*/
+    .body-loggedout{
+        background-size:150%;
+    }
+}
+
+/*<<<<< 640px >>>>>*/
+@media (min-width: 640px){
+    /*<<<<< BASE STYLES >>>>>*/
+    .body-loggedout{
+            background-size:150%;
+            background-position: 10% 30%;
+    }
+}
+
+/*<<<<< 768px >>>>>*/
+@media (min-width: 768px){
+    /*<<<<< HEADER >>>>>*/
+   .header h1{
+    font-size: 6.6rem;
+   }
+   .header span{
+    font-size: 2.0rem;
+   }
+}
+
+/*<<<<< 1024px >>>>>*/
+@media (min-width: 1024px){
+ 
+}
+
+/*<<<<< 1280px >>>>>*/
+@media (min-width: 1280px){
+    /*<<<<< BASE STYLES >>>>>*/
+    .body-loggedout{
+        background-size: 120%;
+    }
+    /*<<<<< HEADER >>>>>*/
+    .header h1{
+        font-size: 10rem;
+    }
+    .header span, .login-signup a{
+        font-size: 2.4rem;
+    }
+}
+
+/*<<<<< 1536px >>>>>*/
+@media (min-width: 1536px){
+
 }
