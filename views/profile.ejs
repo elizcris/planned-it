@@ -1,14 +1,24 @@
-<%- include('partials/header') -%>
-<div>
+<%- include('partials/header-profile') -%>
+<div class="container">
   <div>
-    <p><strong>User Name</strong>: <%= user.userName %></p>
-    <p><strong>Email</strong>: <%= user.email %></p>
-    <a href="/logout" class="col-3 btn btn-primary">Logout</a>
+    <p>Welcome, <%= user.userName %>!</p>
   </div>
   <div>
-    <p>What are you planning right now?</p>
-    <a href="/packing">Packing</a>
-    <a href="/transport">Transport</a>
+    <p>Please select your journey!</p>
+  </div>
+  <div class="profile-choosepath">
+    <div>
+      <a href="/tripbuilder">Trip Builder</a>
+    </div>
+    <div>
+      <a href="/currenttrip">Current Trip</a>
+    </div>
+    <div>
+      <a href="/completedtrips">Completed Trips</a>
+    </div>
+    <div>
+      <a href="/reference">Quick Reference/ Travel Tips</a>
+    </div>
   </div>
 </div>
 <%- include('partials/footer') -%>
