@@ -1,5 +1,5 @@
 const express = require('express') //framework
-const app = express()
+const app = express() //create instance of express application
 const mongoose = require('mongoose') //work with models
 const passport = require('passport')
 const session = require('express-session') //sessions & cookies
@@ -16,6 +16,8 @@ const completedtripsRoutes = require('./routes/completedtrips')
 const referenceRoutes = require('./routes/reference')
 const packingRoutes = require('./routes/packing')
 const transportRoutes = require('./routes/transport')
+const newtripRoutes = require('./routes/newtrip')
+const savedtripsRoutes = require('./routes/savedtrips')
 
 //Express use environment variables
 require('dotenv').config({path: './config/.env'})
@@ -71,6 +73,8 @@ app.use('/completedtrips', completedtripsRoutes)
 app.use('/reference', referenceRoutes)
 app.use('/packing', packingRoutes)
 app.use('/transport', transportRoutes)
+app.use('/newtrip', newtripRoutes)
+app.use('/savedtrips', savedtripsRoutes)
 
 //Server Running on environment variable PORT
 app.listen(process.env.PORT, () => {
