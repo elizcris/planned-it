@@ -4,6 +4,7 @@ Full stack web application that allows users to log in and create a profile to c
 
 **Link to project:** https://github.com/elizcris/planned-it.git
 
+![Planned It homepage with an ocean landscape background](/public/images/plannedit.png)
 
 ## How It's Made:
 
