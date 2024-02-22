@@ -1,5 +1,5 @@
 # Planned It
-# LAUNCHING 2/21/24
+# Launching 2/24
 Full stack web application that allows users to log in and create a profile to create and store packing lists, to-dos, travel reward accounts, and plan transportation. The packing lists are organized by category and regularly packed items and to-do lists can be saved for future travel. The transportation planning allows users to enter data such as type of transport, cost, dates, and location to help build out the most seamless logistics.
 
 **Link to project:** https://github.com/elizcris/planned-it.git
