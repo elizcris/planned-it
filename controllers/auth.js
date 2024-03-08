@@ -1,6 +1,7 @@
 const passport = require("passport");
 const validator = require("validator");
 const User = require("../models/User");
+const Packing = require('../models/Packing')
 
 
 exports.getLogin = (req, res) => {
@@ -103,6 +104,156 @@ exports.postSignup = async (req, res, next) => {
   }
   user.save();
   req.logIn(user, (err) => {
+
+    //Preload database items on first signup
+    Packing.insertMany([
+      //TOILETRIES
+      {
+          item: 'Toothbrush',
+          category: 'toiletries',
+          completed: false,
+          userId: req.user.id
+      },
+      {
+        item: 'Toothpaste',
+        category: 'toiletries',
+        completed: false,
+        userId: req.user.id
+      },
+      {
+        item: 'Floss',
+        category: 'toiletries',
+        completed: false,
+        userId: req.user.id
+      },
+      {
+        item: 'Shampoo',
+        category: 'toiletries',
+        completed: false,
+        userId: req.user.id
+      },
+      {
+        item: 'Conditioner',
+        category: 'toiletries',
+        completed: false,
+        userId: req.user.id
+      },
+      {
+        item: 'Body Soap',
+        category: 'toiletries',
+        completed: false,
+        userId: req.user.id
+      },
+      {
+        item: 'Face Wash',
+        category: 'toiletries',
+        completed: false,
+        userId: req.user.id
+      },
+      {
+        item: 'Sunscreen',
+        category: 'toiletries',
+        completed: false,
+        userId: req.user.id
+      },
+      {
+        item: 'Contacts',
+        category: 'toiletries',
+        completed: false,
+        userId: req.user.id
+      },
+      {
+        item: 'Contact Case',
+        category: 'toiletries',
+        completed: false,
+        userId: req.user.id
+      },
+      {
+        item: 'Contact Solution',
+        category: 'toiletries',
+        completed: false,
+        userId: req.user.id
+      },
+      {
+        item: 'Glasses',
+        category: 'toiletries',
+        completed: false,
+        userId: req.user.id
+      },
+      {
+        item: 'Glasses Case',
+        category: 'toiletries',
+        completed: false,
+        userId: req.user.id
+      },
+
+      //TECH
+      {
+        item: 'Phone',
+        category: 'tech',
+        completed: false,
+        userId: req.user.id
+      },
+      {
+        item: 'Laptop',
+        category: 'tech',
+        completed: false,
+        userId: req.user.id
+      },
+      {
+        item: 'Tablet',
+        category: 'tech',
+        completed: false,
+        userId: req.user.id
+      },
+      {
+        item: 'E-Reader',
+        category: 'tech',
+        completed: false,
+        userId: req.user.id
+      },
+      {
+        item: 'Camera',
+        category: 'tech',
+        completed: false,
+        userId: req.user.id
+      },
+      {
+        item: 'Camera Battery',
+        category: 'tech',
+        completed: false,
+        userId: req.user.id
+      },
+      {
+        item: 'SD Card',
+        category: 'tech',
+        completed: false,
+        userId: req.user.id
+      },
+      {
+        item: 'Portable Battery',
+        category: 'tech',
+        completed: false,
+        userId: req.user.id
+      },
+      {
+        item: 'External Harddrive',
+        category: 'tech',
+        completed: false,
+        userId: req.user.id
+      },
+      {
+        item: 'Headphones',
+        category: 'tech',
+        completed: false,
+        userId: req.user.id
+      },
+      //MEDICAL
+
+
+      //MISCELLANEOUS
+    ])
+
     if (err) {
       return next(err);
     }
